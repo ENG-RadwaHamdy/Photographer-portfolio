@@ -171,6 +171,47 @@ body.active{
   padding-inline: 15px;
 }
 
+.shape{
+  display: none;
+}
+
+.section{
+  padding-block: var(--section-padding);
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+  font-family: var(--ff-recoleta);
+  line-height: 1.2;
+}
+
+.h1{
+  font-size: var(--fs-1);
+  font-weight: var(--fw-400);
+}
+
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+  font-weight: var(--fw-300);
+}
+
+.h2{font-size: var(--fs-2);}
+
+.h3{font-size: var(--fs-3);}
+
+.h4{font-size: var(--fs-4);}
+
+.h5{font-size: var(--fs-5);}
+
+.h6{font-size: var(--fs-6);}
+
 
 
 /*-----------------------------------*\
@@ -371,7 +412,39 @@ body.active{
   #HERO
 \*-----------------------------------*/
 
+.hero{
+  padding-block: 12px;
+  text-align: center;
+}
 
+.hero-banner{
+  max-width: 150px;
+  margin-inline: auto;
+  margin-block-end: 20px;
+}
+
+.hero .wrapper{
+  position: relative;
+  text-align: left;
+  margin-block: 10px 25px;
+  height: 1.2em;
+}
+
+.hero .wrapper .strong{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  font-weight: inherit;
+}
+
+.hero-text{
+  font-size: var(--fs-10);
+  font-weight: var(--fw-300);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
 
 
 
