@@ -437,6 +437,8 @@ body.active{
   transform: translateX(-50%);
   width: 300px;
   font-weight: inherit;
+  display: flex;
+
 }
 
 .hero-text{
@@ -446,6 +448,37 @@ body.active{
   letter-spacing: 5px;
 }
 
+.hero .wrapper .space{
+  padding: 0.1em;
+}
+
+.hero .wrapper :is(.in, .out){
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.hero .strong.active .out{
+  opacity: 1;
+  transform: scaleY(1);
+  animation: textWave 0.2s ease reverse forwards;
+}
+
+.hero .wrapper .in{animation: textWave 0.2s ease forwards;}
+
+@keyframes textWave {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  100%{
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  
+  
+}
 
 
 /*-----------------------------------*\
