@@ -180,3 +180,50 @@ const scrollReveal = function() {
 window.addEventListener("scroll", scrollReveal);
 
 scrollReveal();
+
+
+// custom cursor
+
+const cursor = document.querySelector("[data-cursor]");
+
+const anchorElements = document.querySelectorAll("a");
+
+const buttons = document.querySelectorAll("button");
+
+// change cursor element position based on cursor move
+
+document.body.addEventListener("mousemove", function (event){
+    setTimeout(function (){
+        cursor.style.top = `${event.clientY}px`;
+        cursor.style.left = `${event.clientX}px`
+    }, 100)
+});
+
+
+// add cursor hovered class
+const hoverActive = function (){
+    cursor.classList.add("hovered");
+}
+
+//remove cursor hovered class
+const hoverDeactive = function (){
+    cursor.classList.remove("hovered");
+}
+
+
+addEventsOnElements(anchorElements, "mouseover", hoverActive);
+
+addEventsOnElements(anchorElements, "mouseout", hoverDeactive);
+
+addEventsOnElements(buttons, "mouseover", hoverActive);
+
+addEventsOnElements(buttons, "mouseout", hoverDeactive);
+
+
+document.body.addEventListener("mouseout", function () {
+    cursor.classList.add("disapled");
+});
+
+document.body.addEventListener("mouseover", function () {
+    cursor.classList.remove("disapled");
+});
